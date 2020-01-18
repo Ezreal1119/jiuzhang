@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'appone',
+    'imagekit',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-        },
+        }, 
     },
 ]
 
@@ -119,3 +120,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+LOGIN_REDIRECT_URL = 'posts'
+
+LOGOUT_REDIRECT_URL = 'posts'
+
+AUTH_USER_MODEL = 'appone.JiuzhangUser'
