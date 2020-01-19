@@ -1,0 +1,1 @@
+web: gunicorn jiuzhang.wsgi --log-file -
