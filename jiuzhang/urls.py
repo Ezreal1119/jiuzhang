@@ -20,7 +20,7 @@ from appone.views import SignUp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('appi/', include('appone.urls')),
+    path('', include('appone.urls')),
     path('auth/', include('django.contrib.auth.urls')),
     path('auth/signup/', SignUp.as_view(), name = 'signup'),
 ]
